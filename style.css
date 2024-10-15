@@ -1,0 +1,764 @@
+:root{
+    --def-color: #062d52;
+    --def-color-transparent: #263554c9;
+    --dark-color: #777777;
+    --light-color: #cccccc;
+    --primary-color: #167bbc;
+    --info-color: #5bc0de;
+    --success-color: #34924c;
+    --danger-color: #a94442;
+    --warning-color: #f27f36;
+    --dark-bgcolor: #bebebe;
+    --light-bgcolor: #eaeaea;
+    --primary-bgcolor: #167bbc;
+    --info-bgcolor: #5bc0de;
+    --success-bgcolor: #34924c;
+    --danger-bgcolor: #a94442;
+    --warning-bgcolor: #f27f36;
+    --dark-bgcolor-soft: #bebebeaa;
+    --light-bgcolor-soft: #eaeaeaaa;
+    --primary-bgcolor-soft: #167bbcaa;
+    --info-bgcolor-soft: #5bc0deaa;
+    --success-bgcolor-soft: #34924caa;
+    --danger-bgcolor-soft: #a94442aa;
+    --warning-bgcolor-soft: #f27f36aa;
+    --soft-transparent: #20384f23;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hidden{
+    display: none;
+}
+
+.block{
+    display:  block;
+}
+
+div.full{
+    height: 100vh !important;
+    width: 100vw !important;
+}
+
+.cam{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.t1{
+    font-size: 42px;
+}
+
+.t2{
+    font-size: 20px;
+}
+
+.t3{
+    font-size: 16px;
+}
+
+.t4{
+    font-size: 14px;
+}
+
+.t5{
+    font-size: 12px;
+}
+
+.f3{
+    font-size: 18px;
+}
+
+.f5{
+    font-size: 13px;
+}
+
+.bl{
+    color: black;
+    text-decoration: none;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--light-bgcolor);
+}
+
+header{
+    height: 50px;
+    width: calc(100vw - 1.6px);
+    background-color: var(--def-color);
+    color: white;
+    border: 1px inset var(--light-color);
+    box-sizing: border-box;
+}
+
+div#header{
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 1fr 1fr;
+}
+
+button#hamburger{
+    margin-top: 6px;
+    margin-left: 7px;
+    padding-top: 0px;
+    grid-row: span 2;
+    height: 34px;
+    width: 38px;
+    background-color: var(--def-color);
+    color: #fff;
+    font-size: 30px;
+    border-radius: 3px;
+    border: 2px solid #fff;
+}
+
+button#hamburger>span{
+    position: relative;
+    top: -2px;
+}
+
+strong#h1, span#h2{
+    grid-column: 2;
+    margin-left: 10px;
+}
+
+strong#h1{
+    font-size: 18px;
+    margin-top: 7px;
+}
+
+span#h2{
+    grid-row: 2;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+div#logo{
+    display: inline;
+    grid-row: span 2;
+    margin-top: 4px;
+    height: 40px;
+    padding-left: 8px;
+    border-left: 1px outset #fff;
+}
+
+img#imglogo{
+    height: 40px;
+    width: 37px;
+}
+
+div#main{
+    height: calc(100vh - 50px);
+    width: 100vw;
+    padding: 25px;
+    background-color: var(--light-bgcolor);
+    box-sizing: border-box;
+}
+
+div#bodyleft{
+    height: 100vh;
+    width: 60vw;
+    background-image: url("images/bg-1.jpg");
+    background-position: center top;
+    background-size: auto max(100%, calc(482 / 1400 * 60vw));
+}
+
+div#leftshading{
+    background-color: var(--def-color-transparent);
+    height: 70vh;
+    padding-top: 30vh;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+div#leftshading>.text{
+    color: white;
+}
+
+p#loginp{
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--dark-color);
+}
+
+a.links{
+    color: #fff;
+    text-decoration: none;
+}
+
+div#bodyright{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100%;
+    width: 40vw;
+    text-align: center;
+    background-color: #fff;
+}
+
+div#loginbody{
+    height: calc(100% - 140px);
+}
+
+div#loginlogo{
+    padding-top: 110px;
+    width: 100%;
+}
+
+div#loginlogo>img#imglogo{
+    width: 80px;
+    height: 80px;
+}
+
+form#loginform{
+    width: 46%;
+    padding-left: 27%;
+    text-align: left;
+}
+
+form#loginform>label{
+    text-align: left;
+}
+
+input[type=text], input[type=password], input[type="time"], select{
+    width: 100%;
+    height: 25px;
+    margin-top: 12px;
+    margin-bottom: 16px;
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid black;
+    text-align: left;
+}
+
+input[type=password]{
+    margin-bottom: 25px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    outline: none;
+}
+
+input[type=password]::-webkit-input-placeholder, input[type=text]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 14px;
+    color: var(--dark-color);
+}
+input[type=password]::-moz-placeholder, input[type=text]::-moz-placeholder { /* Firefox 19+ */
+    font-size: 14px;
+    color: var(--dark-color);
+}
+input[type=password]:-ms-input-placeholder, input[type=text]:-ms-input-placeholder { /* IE 10+ */
+    font-size: 14px;
+    color: var(--dark-color);
+}
+input[type=password]:-moz-placeholder, input[type=text]:-moz-placeholder { /* Firefox 18- */
+    font-size: 14px;
+    color: var(--dark-color);
+}
+
+span#spanparent{
+    margin-bottom: 10px;
+}
+
+input[type=checkbox]{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+input[type=checkbox]+div.checkbox{
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: var(--light-color);
+    border-radius: 4px;
+    text-align: center;
+    top: 2.3px;
+    margin-right: 5px;
+}
+
+input[type=checkbox]+div.checkbox:hover{
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked+div.checkbox{
+    background-color: var(--primary-color);
+}
+
+div.checkbox>i.fa-check{
+    position: relative;
+    color: white;
+    top:-2.5px;
+    font-size: 12px;
+    display: none;
+}
+
+input[type=checkbox]:checked+div.checkbox>i.fa-check{
+    display: inline-block;
+}
+
+span#moreform{
+    display: grid;
+    margin-top: 5px;
+    grid-template-columns: 1fr 1fr;
+}
+
+span#forgot{
+    justify-self: end;
+}
+
+span#forgot:hover{
+    cursor: pointer;
+}
+
+button#loginbutton{
+    height: 34px;
+    width: 120px;
+    background-color: var(--def-color);
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 17px;
+    margin-left: calc(50% - 60px);
+    margin-top: 20px;
+}
+
+button#loginbutton:hover{
+    background-color: var(--primary-bgcolor);
+}
+
+div#loginfooter{
+    height: 140px;
+    width: 100%;
+    color: var(--dark-color);
+    align-self: flex-end;
+}
+
+button.social{
+    margin-top: 10px;
+    height: 34px;
+    width: 34px;
+    border-radius: 17px;
+    border: none;
+    color: #fff;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+ul#socs{
+    display: grid;
+    grid-template-columns: 45px 45px 45px 45px;
+    list-style: none;
+    text-align: center;
+    margin-left: calc(50% - 90px);
+    margin-top: 0;
+    bottom: 0;
+}
+
+button.social#fb{
+    background-color: #3b5894;
+}
+
+button.social#ig{
+    background-color: #e1306c;
+}
+
+button.social#yt{
+    background-color: #db443b;
+}
+
+button.social#li{
+    background-color: #007ab4;
+}
+
+div#loginsignature{
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid var(--dark-color);
+    color: var(--dark-color);
+}
+
+@media only screen and (max-width: 767px) {
+    div#bodyleft{
+        display: none;
+        width: 0;
+    }
+    div#bodyright{
+        width: 100vw;
+        padding-top: 9vh;
+    }
+    form#loginform{
+        width: 70%;
+        padding-left: 15%;
+    }
+}
+
+.popup{
+    position: absolute;
+    background-color: #fff;
+    left: calc(50vw - 250px);
+    top: calc(50vh - 100px);
+    width: 500px;
+    height: 200px;
+    border: 3px solid #333;
+    border-radius: 20px;
+    display: none;
+}
+
+.popupheader{
+    background: var(--danger-bgcolor);
+    color: #fff;
+    border-radius: 18px 18px 0 0;
+    height: 50px;
+    line-height: 20px;
+    padding: 15px;
+    border-bottom: 2px solid #333;
+    box-sizing: border-box;
+}
+
+.popupbody{
+    height: 150px;
+    padding: 15px;
+    padding-top: 23px;
+    box-sizing: border-box;
+}
+
+#loginFailedAcc, #dbFailedAcc{
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    height: 35px;
+    width: 70px;
+    background-color: var(--danger-bgcolor);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+#sideBar{
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    border: none;
+    border-radius: 0;
+    background-color: var(--soft-transparent);
+    color: #fff;
+}
+
+#sideBar>.popupheader{
+    padding-top: 0;
+    padding-right: 0;
+    height: 50px;
+    width: max(300px, 25vw);
+    background-color: var(--def-color);
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #000;
+    border-radius: 0;
+    box-sizing: border-box;
+    background-color: var(--def-color);
+}
+
+.closeButton{
+    height: 25px;
+    width: 25px;
+    background-color: var(--def-color);
+    border: none;
+    font-size: 25px;
+}
+
+#sideBar>.popupheader>span{
+    margin-top: 15px;
+    float: left;
+}
+
+#sideBar>.popupheader>.closeButton{
+    margin-top: 10px;
+    margin-right: 15px;
+    float: right;
+    color: #fff;
+}
+
+#sideBar>.popupbody{
+    height: calc(100vh - 50px);
+    width: max(300px, 25vw);
+    border-right: 1px solid #000;
+    border-radius: 0;
+    box-sizing: border-box;
+    background-color: var(--light-bgcolor);
+    padding: 0;
+}
+
+#sideBar li{
+    list-style-type: none;
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid #000;
+    font-size: 16px;
+    line-height: 40px;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: #000
+}
+
+#sideBar li>a{
+    display: inline-block;
+    height: 40px;
+    width: 100%;
+    padding-left: 20px;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: #000;
+    font-weight: 600;
+}
+
+#listDatabase{
+    padding-left: 0 !important;
+    height: 120px !important;
+}
+
+#sideBar li>ul>li>a{
+    padding-left: 30px;
+}
+
+button#addButton{
+    border: none;
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    margin-left: 50px;
+    background-color: var(--def-color);
+    color: #fff;
+    border-radius: 8px;
+}
+
+.container{
+    padding: 0 50px;
+    overflow:scroll;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+table{
+    width: 100%;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+}
+
+tr{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    width: 100%;
+    min-width: 1300px;
+    height: 5vh;
+    background-color: var(--dark-bgcolor);
+    min-height: 24px;
+}
+
+tr:has(>th){
+    height: 4vh;
+}
+
+#tableUsers tr:has(> :last-child:nth-child(5)){
+    grid-template-columns: 1.2fr 2fr 5fr 2fr 120px;
+}
+
+#tableSubjects tr{
+    grid-template-columns: 1fr 2fr 2fr 120px;
+}
+
+#tableSchedule tr{
+    grid-template-columns: 1fr 1fr 1fr 1fr 120px;
+}
+
+td{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    box-sizing: border-box;
+    overflow: scroll;
+    -ms-overflow-style: none;
+}
+
+td::-webkit-scrollbar {
+    display: none;
+}
+
+td:last-child{
+    padding: 0;
+}
+
+td button:last-child{
+    background-color: var(--danger-bgcolor);
+}
+
+th{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    padding-top: 1vh;
+    line-height: 2vh;
+    box-sizing: border-box;
+}
+
+thead tr{
+    background-color: var(--dark-bgcolor-soft);
+}
+
+tr:nth-child(2n){
+    background-color: var(--dark-bgcolor-soft);
+}
+
+td>button{
+    border: none;
+    width: 40%;
+    height: 3vh;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: var(--def-color);
+    color: #fff;
+    border-radius: 8px;
+}
+
+.addPopup, .editPopup, .deletePopup{
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    background-color: var(--soft-transparent);
+    border: none;
+}
+
+.addPopup>div, .editPopup>div, .deletePopup>div{
+    max-width: 500px;
+    height: 300px;
+    width: 80vw;
+    margin-top: calc(50vh - 150px);
+    margin-left: max(calc(50vw - 250px), 10vw);    
+    border: 2px solid black;
+    border-radius: 18px;
+}
+
+#addPopupSubjects>div,
+#editPopupSubjects>div{
+    height: 250px;
+}
+
+.deletePopup>div{
+    margin-top: calc(50vh - 75px);
+    height: 150px;
+}
+
+.addPopupHeader, .editPopupHeader, .deletePopupHeader{
+    height: 50px;
+    background-color: var(--def-color);
+    color: #fff;
+    border: none;
+    border-radius: 15px 15px 0 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.addPopupHeader .closeButton, .editPopup .closeButton, .deletePopupHeader .closeButton{
+    margin-left: min(calc(90vw - 250px), 310px);;
+    color: #fff;
+}
+
+.addPopupBody, .editPopupBody, .deletePopupBody{
+    height: 250px;
+    background-color: var(--light-bgcolor);
+    border:none;    
+    border-radius: 0px 0px 18px 18px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#addPopupSubjects .addPopupBody,
+#editPopupSubjects .editPopupBody{
+    height: 200px;
+}
+
+.deletePopupBody{
+    height: 100px;
+}
+
+.addPopupBody form, .editPopup form{
+    position: absolute;
+    display: grid;
+    height: 230px;
+    width: 480px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
+    align-items: center;
+    justify-content: center;
+}
+
+#addPopupSubjects .addPopupBody form,
+#editPopupSubjects .editPopupBody form{
+    height: 180px;
+    grid-template-rows: 1fr 1fr 1fr 2fr;
+}
+
+.addPopupBody form input[type="text"],
+.editPopupBody form input[type="text"], 
+.addPopupBody form input[type="time"], 
+.editPopupBody form input[type="time"], 
+.addPopupBody form select,
+.editPopupBody form select{
+    margin: 0;
+}
+
+.deletePopupBody form{
+    position: absolute;
+    height: 80px;
+    width: 480px;
+}
+
+.addPopupBody form>button, .editPopupBody form>button, .deletePopupBody form>button, .deletePopupBody form>input{
+    border: none;
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: var(--def-color);
+    color: #fff;
+    border-radius: 8px;
+    grid-column: 2;
+}
+
+#deletePopupBody{
+    position: absolute;
+    top: 10px;
+}
+
+.deletePopupBody form>button, .deletePopupBody form>input{
+    position: absolute;
+    right: 100px;
+    width: 60px;
+    height: 30px;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.deletePopupBody form>input{
+    right: 20px;
+    background-color: var(--danger-bgcolor);
+}
