@@ -27,7 +27,7 @@ The application uses three main tables:
 2. **subjects**: Contains information about subjects, including name and lecturer ID
 3. **schedule**: Holds data about when and where subjects are held
 
-## Team Members and Task Assignments
+## Team Members
 
 1. Yonathan Marcello s. Tambani
 
