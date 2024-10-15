@@ -29,19 +29,11 @@ The application uses three main tables:
 
 ## Team Members and Task Assignments
 
-1. Yonathan
-   - Task: User Authentication System
-   - Task: Role-based Access Control
-   - Task: PHP-MySQL Integration
+1. Yonathan Marcello s. Tambani
 
-2. Aurick
-   - Task: CRUD Operations for Subjects
-   - Task: Database Design and Implementation
+2. Aurick Ruli Ananta
 
-3. Auzan
-   - Task: CRUD Operations for Schedules
-   - Task: GUI Design and Implementation
-   - Task: Testing and Debugging
+3. Muhammad Auzan Putra Siregar
 
 ## Technologies Used
 
